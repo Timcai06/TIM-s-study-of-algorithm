@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #define MAXSIZE 100
 typedef int ElemType;
-
 // 顺序表结点定义
 typedef struct ListNode {
     int length;
     ElemType data[MAXSIZE];
 }List;
+/*顺序表的特点:查找更快，但是数据的读写效率相较于链表更低
+             利用length达到类似数组下标的作用
+    */
 //初始化顺序表长度
 void initList(List *L){
     L->length = 0;
@@ -92,6 +94,5 @@ int main (){
         printf ("链表中不存在这个元素");
     }
     
-
     return 0;
 }
