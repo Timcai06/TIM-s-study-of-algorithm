@@ -1,9 +1,11 @@
 #include <iostream>
-#include <vector> //动态数组
-#include <set>    //集合，集合里的元素各不相同，且元素会按照从小到大排列
-#include <map>    //键值对，自动将所有的键值对按照键从大到小排序(依照ASCII码排序)
-#include <stack>  //栈
-#include <queue>  //队列
+#include <vector>        //动态数组
+#include <set>           //集合，集合里的元素各不相同，且元素会按照从小到大排列
+#include <unordered_set> //无序的set
+#include <map>           //键值对，自动将所有的键值对按照键从大到小排序(依照ASCII码排序)
+#include <unordered_map> //无序的map
+#include <stack>         //栈
+#include <queue>         //队列
 using namespace std;
 
 int main (){
@@ -97,7 +99,7 @@ int main (){
     que.pop();
     //访问队首、队尾
     cout << que.front() << endl;
-    
+
     que.pop();
     cout << que.front() << endl;
     cout << que.back() << endl;
@@ -105,7 +107,13 @@ int main (){
 
     que.push(100);
     cout << que.back() << endl;
-    cout << "此时队列的长度为: " << que.size() << endl;
+    cout << "此时队列的长度为: " << que.size() << endl << endl;
+
+
+    //————————STL-unordered_map————————//
+    unordered_map<int,int> mm;
+    mm[0] = 100;
+    cout << mm[0] <<endl;
 
     return 0;
 }
